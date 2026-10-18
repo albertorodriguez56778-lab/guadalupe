@@ -1,0 +1,533 @@
+/* Reset General & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--color--gold: #ffd700;
+    --wp--style--global--content-size: 823px;
+    --wp--style--global--wide-size: 1080px;
+}
+
+body.et_cover_background {
+    background-size: cover !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #e2e8f0;
+    background-color: #0b0514;
+    line-height: 1.7em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+}
+
+.container {
+    max-width: var(--wp--style--global--wide-size);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(11, 5, 20, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--wp--preset--color--gold);
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    color: #c084fc;
+}
+
+.btn-ws-nav {
+    background: #25d366;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.btn-ws-nav:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 170px 0 100px 0;
+    text-align: center;
+    background: radial-gradient(circle, rgba(155, 81, 224, 0.25) 0%, rgba(11, 5, 20, 1) 85%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.badge-mystic {
+    background: linear-gradient(90deg, #ffd700, #ff8c00);
+    color: #000;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: var(--wp--preset--color--gold);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* Espacio Imagen Hero */
+.hero-image-box {
+    max-width: 750px;
+    margin: 20px auto 35px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 30px rgba(155, 81, 224, 0.5);
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Nube Flotante Hero */
+.cloud-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.cloud-btn-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 110px;
+    background: radial-gradient(circle, #25d366 0%, #128c7e 100%);
+    border-radius: 80px;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.cloud-btn-hero:hover {
+    transform: scale(1.08);
+}
+
+.cloud-title {
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.cloud-sub {
+    font-size: 0.75rem;
+    color: #e8f5e9;
+}
+
+/* Servicios */
+.services {
+    padding: 80px 0;
+    background-color: #07030d;
+}
+
+.section-title {
+    font-size: 2.3rem;
+    color: var(--wp--preset--color--gold);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(155, 81, 224, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--wp--preset--color--gold);
+    transform: translateY(-5px);
+}
+
+.card-image-box {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* GALERÍA DE RITUALES */
+.gallery-section {
+    padding: 80px 0;
+    background-color: #0b0514;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 5, 20, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay span {
+    color: var(--wp--preset--color--gold);
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* SECCIÓN DE CAPTURAS WHATSAPP */
+.whatsapp-testimonials {
+    padding: 80px 0;
+    background: #07030d;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.ws-chat-card {
+    background-color: #0b141a;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.chat-header {
+    background-color: #202c33;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #128c7e, #25d366);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.chat-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-name {
+    color: #e9edef;
+    font-weight: 600;
+}
+
+.chat-status {
+    color: #00a884;
+    font-size: 0.75rem;
+}
+
+.chat-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.message.incoming {
+    background-color: #202c33;
+    color: #e9edef;
+    align-self: flex-start;
+}
+
+.message.outgoing {
+    background-color: #005c4b;
+    color: #e9edef;
+    align-self: flex-end;
+}
+
+.msg-time {
+    display: block;
+    font-size: 0.68rem;
+    color: #8696a0;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.checks {
+    color: #53bdeb;
+    font-weight: bold;
+}
+
+/* Banner CTA */
+.cta-banner {
+    margin-top: 40px;
+    background: linear-gradient(135deg, rgba(155, 81, 224, 0.3) 0%, rgba(37, 211, 102, 0.2) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.cta-banner h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.btn-ws-banner {
+    display: inline-block;
+    background: #25d366;
+    color: #000;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Trust Section */
+.trust-section {
+    padding: 80px 0;
+    text-align: center;
+    background: #0b0514;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--wp--preset--color--gold);
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+}
+
+.quote-author {
+    color: #a855f7;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.btn-ws-main {
+    display: inline-block;
+    background: linear-gradient(90deg, #25d366, #128c7e);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Footer */
+.footer {
+    padding: 30px 0;
+    background-color: #040208;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* Botón Flotante Fijo Verde */
+.fixed-cloud-green {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.9);
+    z-index: 9999;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.fixed-cloud-green:hover {
+    transform: scale(1.1);
+}
+
+.ws-icon-svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    .btn-ws-nav {
+        display: none;
+    }
+}
+<style>
+  .video-principal
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+</style>
